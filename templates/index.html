@@ -1,0 +1,16 @@
+<table id="myTable">
+              <tr class="header">
+                <th style="width:25%;">Barrel Number</th>
+                <th style="width:25%;">Barrel Type</th>
+                <th style="width:25%;">Trial Name</th>
+                <th style="width:25%;">Plot Number</th>
+              </tr>
+                {% for Barrel_type,Barrel_No,Plot_No,Trial_Name in all_resources %}
+              <tr>
+                <td>{{ Barrel_No }}</td>
+                <td>{{ Barrel_type }}</td>
+                <td>{{ Trial_Name }}</td>
+                <td>{{ Plot_No }}</td>
+              </tr>
+                {% endfor %}
+            </table>

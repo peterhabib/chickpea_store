@@ -25,7 +25,7 @@ SECRET_KEY = 'be-r@vei1%yb61m6k0!#dpi2=dq(=ieh8)!76v11w1+1g6wf4^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['icarda.herokuapp.com']
+ALLOWED_HOSTS = ['icardachickpeastore.herokuapp.com']
 
 
 # Application definition

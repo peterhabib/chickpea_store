@@ -1,72 +1,60 @@
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/autocomplete.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/changelists.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/dashboard.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/fonts.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/login.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive_rtl.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/rtl.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/widgets.css' %}">
-<script src="{% static 'admin/js/actions.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/actions.min.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/autocomplete.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/calendar.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/cancel.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/change_form.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/collapse.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/collapse.min.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/core.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/inlines.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/inlines.min.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/jquery.init.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/popup_response.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/prepopulate.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/prepopulate.min.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/prepopulate_init.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/SelectBox.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/SelectFilter2.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/timeparse.js' %}" type="text/javascript" ></script>
-<script src="{% static 'admin/js/urlify.js' %}" type="text/javascript" ></script>
 <!DOCTYPE html>
 <html>
 <title>ICARDA Chickpea Store</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("{% static 'img/aladdin_talking_t_Bob.jpg' %}");
+  min-height: 130%;
+}
+
+.menu {
+  display: none;
+}
+</style>
 <body>
 
-<!-- Navbar (sit on top) -->
+<!-- Links (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="#home" class="w3-bar-item w3-button"><b>Powered By: </b>Peter T. Habib</a>
-      <a href="#home" class="w3-bar-item w3-button"><b>E-mail: </b>p.habib911@gmail.com</a>
-      <a href="#home" class="w3-bar-item w3-button"><b>Phone: </b>+2001550539179</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="/" class="w3-bar-item w3-button">Search</a>
-      <a href="admin/" class="w3-bar-item w3-button">Admin</a>
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s6">
+      <a href="/" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s6">
+      <a href="/admin" class="w3-button w3-block w3-black">ADMIN</a>
     </div>
   </div>
 </div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-{#    <img class="w3-image" src="/w3images/architect.jpg" alt="Architecture" width="1500" height="800">#}
-    <img class="w3-image" src="{% static 'img/aladdin_talking_t_Bob.jpg' %}" alt="Architecture" width="1500" height="800" >
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>ICARDA</b></span> <span class="w3-hide-small w3-text-light-grey">Chickpeas Store</span></h1>
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+  </div>
+  <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px; color: black"><strong style="color: lawngreen">ICARDA</strong><br><strong style="color: black">Chickpea Store</strong></span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
   </div>
 </header>
 
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px"></div>
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
 
-  <!-- Project Section -->
-
-			<!DOCTYPE html>
+<!-- About Container -->
+<div class="w3-container" id="about">
+    <!DOCTYPE html>
 			<html>
 			<head>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,6 +64,7 @@
 			  box-sizing: border-box;
 			  border: 2px solid #ccc;
 			  border-radius: 4px;
+
 			  font-size: 16px;
 			  background-color: white;
 			  background-image: url('searchicon.png');
@@ -112,7 +101,7 @@
 
 			input[type=text] {
 			  background-color: #f1f1f1;
-			  width: 100%;
+			  width: 50%;
 			}
 
 			input[type=submit] {
@@ -128,7 +117,7 @@
 			  border-top: none;
 			  z-index: 99;
 			  /*position the autocomplete items to be the same width as the container:*/
-			  top: 100%;
+			  top: 50%;
 			  left: 0;
 			  right: 0;
 			}
@@ -152,24 +141,16 @@
 			}
 
 			</style>
-
-			<form action="" method="get" autocomplete="off">
-				<div class="autocomplete" style="width:300px;">
-				<label>Search</label>
-				<input id="myInput" type="text" name="rs" placeholder="search......." value={{ inpo }}>
-				</div>
-				<input type="submit">
-
-			</form>
-
-				<!--<form autocomplete="off" action="/action_page.php">-->
-				  <!--<div class="autocomplete" style="width:300px;">-->
-					<!--<input id="myInput" type="text" name="myCountry" placeholder="Country">-->
-				  <!--</div>-->
-				  <!--<input type="submit">-->
-				<!--</form>-->
-
-			<script>
+            <form action="" method="get" autocomplete="off">
+                <br>
+                <br>
+                <input id="myInput" type="text" name="rs" placeholder="search......." value={{ inpo }}>
+                <input type="submit">
+            </form>
+                <br>
+                <br>
+                <br>
+            <script>
 			function autocomplete(inp, arr) {
 			  /*the autocomplete function takes two arguments,
 			  the text field element and an array of possible autocompleted values:*/
@@ -274,13 +255,13 @@
 			</script>
             </head>
             </html>
-        </section>
-        <!--end of welcome section-->
+</div>
 
+</div>
 
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
 
-        <!--Start of volunteer-->
-        <section id="volunteer">
             <!DOCTYPE html>
             <html>
             <head>
@@ -290,16 +271,6 @@
               box-sizing: border-box;
             }
 
-            #myInput {
-              background-image: url('/css/searchicon.png');
-              background-position: 10px 10px;
-              background-repeat: no-repeat;
-              width: 100%;
-              font-size: 16px;
-              padding: 12px 20px 12px 40px;
-              border: 1px solid #ddd;
-              margin-bottom: 12px;
-            }
 
             #myTable {
               border-collapse: collapse;
@@ -366,16 +337,34 @@
             </script>
             </body>
             </html>
-
+</div>
 
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by: <a href="" title="W3.CSS" target="_blank" class="w3-hover-text-green">Peter T. Habib</a></p>
-  <p>E-mail:  <a href="" title="W3.CSS" target="_blank" class="w3-hover-text-green">p.habib911@gmail.com</a></p>
-  <p>Mobile:  <a href="" title="W3.CSS" target="_blank" class="w3-hover-text-green">+2001550539179</a></p>
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a>Peter T. Habib</a></p>
+  <p>Email: <a>p.habib911@gamil.com</a></p>
+  <p>Phone: <a>+2001550539179</a></p>
 </footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
 
 </body>
 </html>
